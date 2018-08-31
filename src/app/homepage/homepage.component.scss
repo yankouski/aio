@@ -1,0 +1,12 @@
+.home-page {
+    .banner {
+        height: 250px;
+        width: 100%;
+        overflow: hidden;
+        img{
+            @media screen and (min-width: 1920px ) {
+                width: 100%;
+            }
+        }
+    }
+}
