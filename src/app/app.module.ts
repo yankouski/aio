@@ -17,7 +17,7 @@ const appRoutes: Routes = [
     AppComponent,
     HeaderComponent,
     HomepageComponent,
-    LoansComponent
+    LoansComponent,
   ],
   imports: [
     BrowserModule,
