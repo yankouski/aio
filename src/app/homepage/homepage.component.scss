@@ -9,4 +9,30 @@
             }
         }
     }
+
+    #aioVideos,
+    #aioVideoCarousel {
+        width: 100%;
+        padding: 20px 0;
+        margin: 0 auto;
+
+        video {
+            width: 100%;
+        }
+    }
+
+    #aioVideos {
+        display: flex;
+        justify-content: space-between;
+
+        div{
+            width: 24%;
+
+            p {
+                text-align: center;
+                font-size: 13px;
+                font-weight: bold;
+            }
+        }
+    }
 }

@@ -1,62 +1,58 @@
 <div class="home-page">
+
     <div class="banner">
       <img class="img-fluid" src="assets/img/intro.jpg">
-    </div>
-    <div class="intro-text">
-      <div class="container">
-          <h5>
-              All In One Loan Interactive Simulator
-            </h5>
-            <p>
-              Mortgage interest can be one of life's biggest financial obstructions. 
-              The All In One Loan was developed by homeowners and mortgage professionals as a solution. 
-              By combining banking functionality with home financing into one dynamic instrument, 
-              borrowers may be able to save tens of thousands of dollars and years off their loan. 
-              This interactive Simulator will help you determine if it's right for you.
-            </p>
-      </div>    
-    </div>
-    <div *ngIf="mobileScreen; else desktopView">
-      <section id="aioVideoCarousel" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#aioVideoCarousel" data-slide-to="0" class="active"></li>
-          <li data-target="#aioVideoCarousel" data-slide-to="1"></li>
-          <li data-target="#aioVideoCarousel" data-slide-to="2"></li>
-          <li data-target="#aioVideoCarousel" data-slide-to="3"></li>
-        </ol>
-        <div class="carousel-inner">
-          <div class="carousel-item" *ngFor="let video of videos; let i = index" [ngClass]="{'active': i === 0}">
-              <div style="width: 300px; height: 300px">
-                {{i}}
-              </div>
-          </div>
+    </div>   
 
-          <!-- <div class="carousel-item active">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/mqvFvAdyVFc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <div class="container">
+      <div class="intro-text">
+          <h5>
+            All In One Loan Interactive Simulator
+          </h5>
+          <p>
+            Mortgage interest can be one of life's biggest financial obstructions. 
+            The All In One Loan was developed by homeowners and mortgage professionals as a solution. 
+            By combining banking functionality with home financing into one dynamic instrument, 
+            borrowers may be able to save tens of thousands of dollars and years off their loan. 
+            This interactive Simulator will help you determine if it's right for you.
+          </p>
+      </div>   
+
+      <div *ngIf="mobileScreen; else desktopView">
+          <section id="aioVideoCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#aioVideoCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#aioVideoCarousel" data-slide-to="1"></li>
+              <li data-target="#aioVideoCarousel" data-slide-to="2"></li>
+              <li data-target="#aioVideoCarousel" data-slide-to="3"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item" *ngFor="let video of videos; let i = index" [ngClass]="{'active': i === 0}">
+                  <video width="100%" height="auto" [src]="video.Url">
+                      <source [src]="video.Url" type="video/mp4">
+                  </video>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#aioVideoCarousel" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#aioVideoCarousel" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </section>
+      </div>
+      <ng-template #desktopView>
+        <section id="aioVideos">
+          <div *ngFor="let video of videos">
+              <video width="100%" height="auto" [src]="video.Url">
+                  <source [src]="video.Url" type="video/mp4">
+              </video>
+              <p>{{video.Description}}</p>
           </div>
-          <div class="carousel-item">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/mqvFvAdyVFc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
-          <div class="carousel-item">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/mqvFvAdyVFc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
-          <div class="carousel-item">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/mqvFvAdyVFc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div> -->
-        </div>
-        <a class="carousel-control-prev" href="#aioVideoCarousel" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#aioVideoCarousel" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </section>
+        </section>
+      </ng-template>
     </div>
-    <ng-template #desktopView>
-      Desktop
-    </ng-template>
-  
 </div>
 

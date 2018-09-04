@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { LoansComponent } from './simulator/loans/loans.component';
+import { SafePipe } from './shared/pipes/safe.pipe';
 
 const appRoutes: Routes = [
   {path: '',  component: HomepageComponent},
@@ -18,6 +19,7 @@ const appRoutes: Routes = [
     HeaderComponent,
     HomepageComponent,
     LoansComponent,
+    SafePipe
   ],
   imports: [
     BrowserModule,

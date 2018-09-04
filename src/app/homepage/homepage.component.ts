@@ -11,10 +11,10 @@ export class HomepageComponent implements OnInit {
   public mobileScreen : boolean;
 
   public videos : AioVideo[] = [
-    { Description: "All In One Loan Simulator", Url: "https://www.youtube.com/embed/GLqX8DyT2Hw" },
-    { Description: "Product Background", Url: "https://www.youtube.com/embed/4VItZ_V0TV8" },
+    { Description: "All In One Loan Simulator", Url: "https://www.youtube.com/watch?v=GLqX8DyT2Hw" },
+    { Description: "Product Background", Url: "https://www.youtube.com/watch?v=4VItZ_V0TV8" },
     { Description: "Why the All In One", Url: "https://www.youtube.com/watch?v=6f--XPGDLBM" },
-    { Description: "It's Just Math", Url: "https://www.youtube.com/embed/ligrWnJXqD0" }
+    { Description: "It's Just Math", Url: "https://www.youtube.com/watch?v=ligrWnJXqD0" }
   ]
 
   constructor() { }
